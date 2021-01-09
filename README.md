@@ -8,8 +8,9 @@ Une fois dans l'application, entrez les valeurs des variables de votre molécule
 
 Attention la réponse est oui ou non et elle est toute à la fin de la page.
 
-Voici un jeux de données (première ligne du dataset) : 3.919,0,0,	0,	0,	31.4,	0,	0,	3.106,	2.550,	9.002,	0,	1.201,	0,	1.932,	4.489,	0,	0,	2.949,	0,	7.253,	0,	0
+Voici un jeux de données (première ligne du dataset) : 3.919,0,0,	0,0,31.4,0,0,3.106,2.550,9.002,0,1.201,0,	1.932,	4.489,	0,	0,	2.949,	0,	7.253,	0,	0
 Pour ces valeurs le modèle doit donner comme réponse oui.
 
-
 En conclusion nous avons entrainer un modèle (basé sur l'algorithme SVM) qui determine ou non si une molécule est biodégradable. 
+
+Pour plus d'informations techniques (accuracy et choix du modèle) veuillez regarder le rapport.pdf dans le dossier final_project.
