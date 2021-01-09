@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>QSAR biodegradation</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div style="overflow: scroll" ;>
+        <h1>Prédiction de molécule biodégradable</h1>
+        <p>Faites attention au nom des variables!</p>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('funct_prediction')}}" method="post" style="width:100%; height:auto;">
+            <input type="text" name="SpMax_L" placeholder="SpMax_L" required="required" />
+            <input type="text" name="nHM" placeholder="nHM" required="required" />
+            <input type="text" name="F04[C-N]" placeholder="F04[C-N]" required="required" />
+            <input type="text" name="NssssC" placeholder="NssssC" required="required" />
+            <input type="text" name="nCb-" placeholder="nCb-" required="required" />
+            <input type="text" name="C%" placeholder="C%" required="required" />
+            <input type="text" name="nO" placeholder="nO" required="required" />
+            <input type="text" name="F03[C-N]" placeholder="F03[C-N]" required="required" />
+            <input type="text" name="HyWi_B(m)" placeholder="HyWi_B(m)" required="required" />
+            <input type="text" name="LOC" placeholder="LOC" required="required" />
+            <input type="text" name="SM6_L" placeholder="SM6_L" required="required" />
+            <input type="text" name="nArNO2" placeholder="nArNO2" required="required" />
+            <input type="text" name="SpPosA_B(p)" placeholder="SpPosA_B(p)" required="required" />
+            <input type="text" name="B03[C-Cl]" placeholder="B03[C-Cl]" required="required" />
+            <input type="text" name="SpMax_A" placeholder="SpMax_A" required="required" />
+            <input type="text" name="TI2_L" placeholder="TI2_L" required="required" />
+            <input type="text" name="C-026" placeholder="C-026" required="required" />
+            <input type="text" name="F02[C-N]" placeholder="F02[C-N]" required="required" />
+            <input type="text" name="SpMax_B(m)" placeholder="SpMax_B(m)" required="required" />
+            <input type="text" name="nN" placeholder="nN" required="required" />
+            <input type="text" name="SM6_B(m)" placeholder="SM6_B(m)" required="required" />
+            <input type="text" name="nArCOOR" placeholder="nArCOOR" required="required" />
+            <input type="text" name="nX" placeholder="nX" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Entrer</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+</body>
+
+</html>
